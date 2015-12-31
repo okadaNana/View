@@ -19,6 +19,8 @@
         <activity android:name=".activity.TaiJiActivity" />
         <activity android:name=".activity.RefreshActivity" />
         <activity android:name=".activity.WeiBoLoadingViewActivity" />
+        <activity android:name=".activity.PaintStyleActivity" />
+
     </application>
 
 </manifest>
