@@ -40,6 +40,7 @@ public class RadarView extends View {
 
         drawPolygon(canvas);
         drawLine(canvas);
+        drawRegion(canvas);
     }
 
     /**
@@ -47,7 +48,7 @@ public class RadarView extends View {
      */
     private void drawPolygon(Canvas canvas) {
         Path mPath = new Path();
-        float r = 50F;
+        float r = 30F;
 
         for (int k = 0; k < 5; k++) {
             float radius = r * (1 + k);
@@ -55,7 +56,7 @@ public class RadarView extends View {
             mPath.moveTo(radius, 0);
             for (int i = 1; i < 6; i++) {
                 float x = (float) (Math.cos(mAngel * i) * radius);
-                float y =(float) (Math.sin(mAngel * i) * radius);
+                float y = (float) (Math.sin(mAngel * i) * radius);
                 mPath.lineTo(x, y);
             }
             mPath.close();
@@ -71,12 +72,45 @@ public class RadarView extends View {
             path.reset();
 
             path.moveTo(0, 0);
-            float x = (float) (Math.cos(mAngel * i) * 250);
-            float y =(float) (Math.sin(mAngel * i) * 250);
+            float x = (float) (Math.cos(mAngel * i) * 150);
+            float y = (float) (Math.sin(mAngel * i) * 150);
             path.lineTo(x, y);
 
             canvas.drawPath(path, mPaint);
         }
+    }
+
+    private void drawRegion(Canvas canvas) {
+        float[] percents = new float[]{
+                0.4F,
+                0.6F,
+                0.8F,
+                0.5F,
+                0.6F,
+                0.9F
+        };
+        Paint paint = new Paint();
+        paint.setColor(Color.BLUE);
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint.setStrokeWidth(2F);
+        paint.setAlpha(127);
+
+        Path mPath = new Path();
+
+        float radius = 150;
+
+        for (int i = 0; i < 6; i++) {
+            float x = (float) (Math.cos(mAngel * i) * radius) * percents[i];
+            float y = (float) (Math.sin(mAngel * i) * radius) * percents[i];
+            if (i == 0) {
+                mPath.moveTo(x, 0);
+            } else {
+                mPath.lineTo(x, y);
+            }
+        }
+        mPath.close();
+
+        canvas.drawPath(mPath, paint);
     }
 
 }
