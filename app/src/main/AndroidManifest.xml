@@ -21,6 +21,7 @@
         <activity android:name=".activity.WeiBoLoadingViewActivity" />
         <activity android:name=".activity.PaintStyleActivity" />
         <activity android:name=".activity.RadarViewActivity" />
+        <activity android:name=".activity.PieChartViewActivity" />
     </application>
 
 </manifest>

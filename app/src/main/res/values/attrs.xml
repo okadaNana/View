@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PieChart">
+        <attr name="pie_autoCenterPointerInSlice" format="boolean"/>
+        <attr name="pie_highlightStrength" format="float"/>
+        <attr name="pie_labelColor" format="color"/>
+        <attr name="pie_labelHeight" format="dimension"/>
+        <attr name="pie_labelPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+        <attr name="pie_labelWidth" format="dimension"/>
+        <attr name="pie_labelY" format="dimension"/>
+        <attr name="pie_pieRotation" format="integer"/>
+        <attr name="pie_pointerRadius" format="dimension"/>
+        <attr name="pie_showText" format="boolean"/>
+    </declare-styleable>
+</resources>

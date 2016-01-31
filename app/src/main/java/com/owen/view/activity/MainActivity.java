@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         MODULE_LIST.add(new Module("仿新浪微博进度条", WeiBoLoadingViewActivity.class));
         MODULE_LIST.add(new Module("画笔的 Style", PaintStyleActivity.class));
         MODULE_LIST.add(new Module("雷达", RadarViewActivity.class));
+        MODULE_LIST.add(new Module("饼图", PieChartViewActivity.class));
     }
 
     @Override
