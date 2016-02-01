@@ -5,12 +5,12 @@ package com.owen.view.model;
  * <p/>
  * Created by Owen on 2015/12/28.
  */
-public class Module {
+public class ModelModule {
 
     private String name;
     private Class<?> clazz;
 
-    public Module(String name, Class<?> clazz) {
+    public ModelModule(String name, Class<?> clazz) {
         this.name = name;
         this.clazz = clazz;
     }

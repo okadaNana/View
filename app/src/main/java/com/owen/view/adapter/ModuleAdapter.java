@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.owen.view.model.Module;
+import com.owen.view.model.ModelModule;
 
 import java.util.List;
 
@@ -19,10 +19,10 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ViewHolder
 
     private Context mContext;
     private LayoutInflater mInflater;
-    private List<Module> mModuleList;
+    private List<ModelModule> mModuleList;
 
 
-    public ModuleAdapter(Context context, List<Module> moduleList) {
+    public ModuleAdapter(Context context, List<ModelModule> moduleList) {
         mModuleList = moduleList;
         mContext = context;
         mInflater = LayoutInflater.from(context);
@@ -35,7 +35,7 @@ public class ModuleAdapter extends RecyclerView.Adapter<ModuleAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final Module module = mModuleList.get(position);
+        final ModelModule module = mModuleList.get(position);
 
         holder.mTvName.setText(module.getName());
         holder.mTvName.setOnClickListener(new View.OnClickListener() {

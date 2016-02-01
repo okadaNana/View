@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.owen.view.R;
 import com.owen.view.adapter.ModuleAdapter;
-import com.owen.view.model.Module;
+import com.owen.view.model.ModelModule;
 import com.owen.view.utils.HorizontalDividerItemDecoration;
 
 import java.util.ArrayList;
@@ -15,18 +15,18 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static List<Module> MODULE_LIST;
+    private static List<ModelModule> MODULE_LIST;
 
     static {
         MODULE_LIST = new ArrayList<>();
 
-        MODULE_LIST.add(new Module("圆形进度条", CircleProgressActivity.class));
-        MODULE_LIST.add(new Module("太极图", TaiJiActivity.class));
-        MODULE_LIST.add(new Module("刷新进度条", RefreshActivity.class));
-        MODULE_LIST.add(new Module("仿新浪微博进度条", WeiBoLoadingViewActivity.class));
-        MODULE_LIST.add(new Module("画笔的 Style", PaintStyleActivity.class));
-        MODULE_LIST.add(new Module("雷达", RadarViewActivity.class));
-        MODULE_LIST.add(new Module("饼图", PieChartViewActivity.class));
+        MODULE_LIST.add(new ModelModule("圆形进度条", CircleProgressActivity.class));
+        MODULE_LIST.add(new ModelModule("太极图", TaiJiActivity.class));
+        MODULE_LIST.add(new ModelModule("刷新进度条", RefreshActivity.class));
+        MODULE_LIST.add(new ModelModule("仿新浪微博进度条", WeiBoLoadingViewActivity.class));
+        MODULE_LIST.add(new ModelModule("画笔的 Style", PaintStyleActivity.class));
+        MODULE_LIST.add(new ModelModule("雷达", RadarViewActivity.class));
+        MODULE_LIST.add(new ModelModule("饼图", PieChartViewActivity.class));
     }
 
     @Override
