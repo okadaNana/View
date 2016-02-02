@@ -2,12 +2,14 @@ package com.owen.view.views;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.owen.view.R;
 import com.owen.view.model.ModelImage;
 import com.owen.view.utils.DensityUtils;
 
@@ -42,14 +44,11 @@ public class NineGridLayout extends ViewGroup {
      */
     private List<ModelImage> mDataSource;
 
-    public NineGridLayout(Context context) {
-        super(context);
-    }
-
     public NineGridLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mWidth = DensityUtils.getInstance(context).getScreenWidth() - DensityUtils.getInstance(context).dip2px(80);
+        mGap = DensityUtils.getInstance(context).dip2px(1);
     }
 
     @Override
@@ -76,6 +75,7 @@ public class NineGridLayout extends ViewGroup {
         // 根据子 View 的宽高,计算出控件的宽高
         ViewGroup.LayoutParams layoutParams = getLayoutParams();
         layoutParams.height = mRow * heightPerImageView + mGap * (mRow - 1);
+        layoutParams.width = mColumn * widthPerImageView + mGap * (mColumn - 1);
         setLayoutParams(layoutParams);
 
         for (int i = 0; i < imageViewCount; i++) {
@@ -89,22 +89,6 @@ public class NineGridLayout extends ViewGroup {
 
             imageView.layout(left, top, right, bottom);
         }
-
-        /*
-        for (int i = 0; i < childrenCount; i++) {
-            CustomImageView childrenView = (CustomImageView) getChildAt(i);
-            childrenView.setImageUrl(((Image) listData.get(i)).getUrl());
-            int[] position = findPosition(i);
-            int left = (singleWidth + gap) * position[1];
-            int top = (singleHeight + gap) * position[0];
-            int right = left + singleWidth;
-            int bottom = top + singleHeight;
-
-            childrenView.layout(left, top, right, bottom);
-        }
-
-         */
-
     }
 
     /**
@@ -122,16 +106,6 @@ public class NineGridLayout extends ViewGroup {
         }
 
         return position;
-    }
-
-    private static class Position {
-        public int row;
-        public int col;
-
-        public Position(int row, int col) {
-            this.row = row;
-            this.col = col;
-        }
     }
 
     private void addImageViews() {
@@ -177,14 +151,25 @@ public class NineGridLayout extends ViewGroup {
     private ImageView generateImageView() {
         ImageView iv = new ImageView(getContext());
         iv.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        iv.setImageDrawable(ContextCompat.getDrawable(getContext(), R.mipmap.ic_launcher));
         iv.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getContext(), "点击ImageView", Toast.LENGTH_SHORT).show();
             }
         });
-        iv.setBackgroundColor(Color.parseColor("#f5f5f5"));
+        iv.setBackgroundColor(Color.BLACK);
         return iv;
+    }
+
+    private static class Position {
+        public int row;
+        public int col;
+
+        public Position(int row, int col) {
+            this.row = row;
+            this.col = col;
+        }
     }
 
 }

@@ -22,6 +22,7 @@
         <activity android:name=".activity.PaintStyleActivity" />
         <activity android:name=".activity.RadarViewActivity" />
         <activity android:name=".activity.PieChartViewActivity" />
+        <activity android:name=".activity.MomentsActivity" />
     </application>
 
 </manifest>
