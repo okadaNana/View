@@ -23,6 +23,7 @@
         <activity android:name=".activity.RadarViewActivity" />
         <activity android:name=".activity.PieChartViewActivity" />
         <activity android:name=".activity.MomentsActivity" />
+        <activity android:name=".activity.CheckBoxActivity" />
     </application>
 
 </manifest>

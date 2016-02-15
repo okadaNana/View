@@ -20,7 +20,7 @@ import java.util.List;
  *
  * Created by mike on 16/2/1.
  */
-public class NineGridLayout extends ViewGroup {
+public class NineGridLayoutPro extends ViewGroup {
 
     /**
      * 每个 item 之间的间隔
@@ -44,7 +44,7 @@ public class NineGridLayout extends ViewGroup {
      */
     private List<ModelImage> mDataSource;
 
-    public NineGridLayout(Context context, AttributeSet attrs) {
+    public NineGridLayoutPro(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         mWidth = DensityUtils.getInstance(context).getScreenWidth() - DensityUtils.getInstance(context).dip2px(80);
@@ -76,7 +76,7 @@ public class NineGridLayout extends ViewGroup {
         int heightPerImageView = widthPerImageView;
 
         // 根据子 View 的宽高,计算出控件的宽高
-        ViewGroup.LayoutParams layoutParams = getLayoutParams();
+        LayoutParams layoutParams = getLayoutParams();
         layoutParams.height = mRow * heightPerImageView + mGap * (mRow - 1);
         layoutParams.width = mColumn * widthPerImageView + mGap * (mColumn - 1);
         setLayoutParams(layoutParams);

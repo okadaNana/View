@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         MODULE_LIST.add(new ModelModule("雷达", RadarViewActivity.class));
         MODULE_LIST.add(new ModelModule("饼图", PieChartViewActivity.class));
         MODULE_LIST.add(new ModelModule("朋友圈", MomentsActivity.class));
+        MODULE_LIST.add(new ModelModule("CheckBox之 0 与 1 的艺术", CheckBoxActivity.class));
     }
 
     @Override
