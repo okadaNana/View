@@ -30,6 +30,8 @@
         <activity android:name=".activity.DragView4Activity" />
         <activity android:name=".activity.DragView5Activity" />
         <activity android:name=".activity.DragView6Activity" />
+        <activity android:name=".activity.DragView7Activity" />
+        <activity android:name=".activity.DragView8Activity" />
         <activity android:name=".activity.EventDispatchActivity" />
     </application>
 

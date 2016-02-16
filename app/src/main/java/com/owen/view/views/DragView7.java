@@ -9,13 +9,13 @@ import android.widget.Button;
 /**
  * Created by mike on 16/2/16.
  */
-public class DragView6 extends Button {
+public class DragView7 extends Button {
 
-    public DragView6(Context context) {
+    public DragView7(Context context) {
         super(context);
     }
 
-    public DragView6(Context context, AttributeSet attrs) {
+    public DragView7(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

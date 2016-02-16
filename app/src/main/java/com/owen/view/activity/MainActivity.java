@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         MODULE_LIST.add(new ModelModule("View 的滑动 -- MarginLayoutParams", DragView4Activity.class));
         MODULE_LIST.add(new ModelModule("View 的滑动 -- getX() scrollBy()", DragView5Activity.class));
         MODULE_LIST.add(new ModelModule("View 的滑动 -- getRawX() scrollBy()", DragView6Activity.class));
+        MODULE_LIST.add(new ModelModule("View 的滑动 -- getRawX() scrollTo()", DragView7Activity.class));
+        MODULE_LIST.add(new ModelModule("View 的滑动 -- Scroller", DragView8Activity.class));
         MODULE_LIST.add(new ModelModule("View 的事件分发", EventDispatchActivity.class));
     }
 
