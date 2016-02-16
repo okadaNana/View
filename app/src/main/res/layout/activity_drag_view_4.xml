@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.owen.view.views.DragView3
+    <com.owen.view.views.DragView4
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:background="@android:color/holo_green_light" />

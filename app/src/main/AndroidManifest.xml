@@ -26,6 +26,10 @@
         <activity android:name=".activity.CheckBoxActivity" />
         <activity android:name=".activity.DragViewActivity" />
         <activity android:name=".activity.DragView2Activity" />
+        <activity android:name=".activity.DragView3Activity" />
+        <activity android:name=".activity.DragView4Activity" />
+        <activity android:name=".activity.DragView5Activity" />
+        <activity android:name=".activity.DragView6Activity" />
         <activity android:name=".activity.EventDispatchActivity" />
     </application>
 
