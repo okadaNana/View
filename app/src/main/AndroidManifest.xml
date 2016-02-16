@@ -24,6 +24,9 @@
         <activity android:name=".activity.PieChartViewActivity" />
         <activity android:name=".activity.MomentsActivity" />
         <activity android:name=".activity.CheckBoxActivity" />
+        <activity android:name=".activity.DragViewActivity" />
+        <activity android:name=".activity.DragView2Activity" />
+        <activity android:name=".activity.EventDispatchActivity" />
     </application>
 
 </manifest>

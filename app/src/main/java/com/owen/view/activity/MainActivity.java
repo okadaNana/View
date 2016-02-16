@@ -27,8 +27,11 @@ public class MainActivity extends AppCompatActivity {
         MODULE_LIST.add(new ModelModule("画笔的 Style", PaintStyleActivity.class));
         MODULE_LIST.add(new ModelModule("雷达", RadarViewActivity.class));
         MODULE_LIST.add(new ModelModule("饼图", PieChartViewActivity.class));
-        MODULE_LIST.add(new ModelModule("朋友圈", MomentsActivity.class));
+        MODULE_LIST.add(new ModelModule("朋友圈九宫格 -- 自定义 ViewGroup", MomentsActivity.class));
         MODULE_LIST.add(new ModelModule("CheckBox之 0 与 1 的艺术", CheckBoxActivity.class));
+        MODULE_LIST.add(new ModelModule("View 的滑动 -- layout() getX()", DragViewActivity.class));
+        MODULE_LIST.add(new ModelModule("View 的滑动 -- layout() getRawX()", DragView2Activity.class));
+        MODULE_LIST.add(new ModelModule("View 的事件分发", EventDispatchActivity.class));
     }
 
     @Override
@@ -43,4 +46,5 @@ public class MainActivity extends AppCompatActivity {
         ModuleAdapter adapter = new ModuleAdapter(this, MODULE_LIST);
         recyclerView.setAdapter(adapter);
     }
+
 }
