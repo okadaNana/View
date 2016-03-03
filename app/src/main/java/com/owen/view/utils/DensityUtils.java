@@ -36,4 +36,9 @@ public class DensityUtils {
         return mContext.getResources().getDisplayMetrics().density;
     }
 
+    public float sp2px(float sp){
+        final float scale = mContext.getResources().getDisplayMetrics().scaledDensity;
+        return sp * scale;
+    }
+
 }

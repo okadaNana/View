@@ -34,6 +34,7 @@
         <activity android:name=".activity.DragView8Activity" />
         <activity android:name=".activity.EventDispatchActivity" />
         <activity android:name=".activity.CustomViewPagerIndicatorActivity" />
+        <activity android:name=".activity.LoadingViewActivity" />
     </application>
 
 </manifest>
