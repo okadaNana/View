@@ -9,11 +9,11 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * 圆形进度条
+ * 包裹文字的圆
  * <p/>
  * Created by Owen on 2015/12/24.
  */
-public class CircleProgressView extends View {
+public class CircleTextView extends View {
 
     private Paint mPaintInner;
 
@@ -26,11 +26,11 @@ public class CircleProgressView extends View {
 
     private Paint mPaintHorizontalLine;
 
-    public CircleProgressView(Context context) {
+    public CircleTextView(Context context) {
         this(context, null);
     }
 
-    public CircleProgressView(Context context, AttributeSet attrs) {
+    public CircleTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }

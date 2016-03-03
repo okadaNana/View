@@ -33,6 +33,7 @@
         <activity android:name=".activity.DragView7Activity" />
         <activity android:name=".activity.DragView8Activity" />
         <activity android:name=".activity.EventDispatchActivity" />
+        <activity android:name=".activity.CustomViewPagerIndicatorActivity" />
     </application>
 
 </manifest>
