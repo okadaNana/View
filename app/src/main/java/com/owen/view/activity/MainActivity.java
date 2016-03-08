@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         MODULE_LIST.add(new ModelModule("View 的事件分发", EventDispatchActivity.class));
         MODULE_LIST.add(new ModelModule("自定义 ViewPager Indicator", CustomViewPagerIndicatorActivity.class));
         MODULE_LIST.add(new ModelModule("水平上涨的进度提示控件", LoadingViewActivity.class));
+        MODULE_LIST.add(new ModelModule("画笔点的特殊样式", ArcProgressViewActivity.class));
     }
 
     @Override
