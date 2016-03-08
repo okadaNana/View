@@ -36,6 +36,7 @@
         <activity android:name=".activity.CustomViewPagerIndicatorActivity" />
         <activity android:name=".activity.LoadingViewActivity" />
         <activity android:name=".activity.ArcProgressViewActivity" />
+        <activity android:name=".activity.ViewAnimActivity" />
     </application>
 
 </manifest>
