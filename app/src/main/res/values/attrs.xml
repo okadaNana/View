@@ -15,4 +15,8 @@
         <attr name="pie_pointerRadius" format="dimension"/>
         <attr name="pie_showText" format="boolean"/>
     </declare-styleable>
+
+    <declare-styleable name="ViewPagerIndicatorPro">
+        <attr name="visible_tab_count" format="integer" />
+    </declare-styleable>
 </resources>

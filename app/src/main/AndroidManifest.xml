@@ -37,6 +37,8 @@
         <activity android:name=".activity.LoadingViewActivity" />
         <activity android:name=".activity.ArcProgressViewActivity" />
         <activity android:name=".activity.ViewAnimActivity" />
+        <activity android:name=".activity.IndicatorProActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
