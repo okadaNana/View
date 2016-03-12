@@ -29,8 +29,6 @@ public class IndicatorProActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewpagerindicator_pro);
 
-        mIndicator = (ViewPagerIndicatorPro) findViewById(R.id.indicator);
-
         mTitles = new ArrayList<>(3);
         mTitles.add("短信1");
         mTitles.add("收藏2");
@@ -59,20 +57,11 @@ public class IndicatorProActivity extends AppCompatActivity {
                 return mFragments.size();
             }
         });
-        mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                mIndicator.scroll(position, positionOffset);
-            }
 
-            @Override
-            public void onPageSelected(int position) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-            }
-        });
+        mIndicator = (ViewPagerIndicatorPro) findViewById(R.id.indicator);
+        mIndicator.setViewPager(mViewPager);
+        mIndicator.setVisibleTabCount(4);
+        mIndicator.setTabTitles(mTitles);
     }
 
 }
